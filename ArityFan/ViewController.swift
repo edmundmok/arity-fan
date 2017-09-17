@@ -28,11 +28,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        water.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
         water.fillDuration = 0
         water.fillRepeatCount = 0
         water.fillAutoReverse = false
-        water.fill(to: 0.8)
+        water.fill(to: 0.85)
         water.stopAnimation()
+        water.removeConstraints(water.constraints)
+        UIView.animate(withDuration: 3) {
+            self.water.frame.origin.y += 300
+        }
         setupCoreEngine()
     }
 
