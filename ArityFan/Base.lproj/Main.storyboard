@@ -29,7 +29,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onStartTrip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z7b-oy-jE8"/>
+                                    <action selector="onStartTrip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8VO-9i-G2i"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68T-u8-Fst">
@@ -53,8 +53,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adg-YP-S67" customClass="BAF">
-                                <rect key="frame" x="67" y="111" width="240" height="298"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adg-YP-S67" customClass="BAFluidView">
+                                <rect key="frame" x="67" y="111" width="240" height="218"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -68,7 +68,6 @@
                     </view>
                     <connections>
                         <outlet property="amountSpilt" destination="68T-u8-Fst" id="wpF-jB-ar2"/>
-                        <outlet property="onStartTrip" destination="KlO-Yy-Ccp" id="E7J-Vl-fXp"/>
                         <outlet property="startTrip" destination="KlO-Yy-Ccp" id="wMi-oK-DAJ"/>
                     </connections>
                 </viewController>

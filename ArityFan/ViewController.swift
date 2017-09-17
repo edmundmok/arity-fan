@@ -45,30 +45,29 @@ class ViewController: UIViewController {
 extension ViewController: DEMDrivingEngineDelegate {
 
     func didStartTripRecording(_ drivingEngine: DEMDrivingEngineManager!) -> String! {
-        <#code#>
+        return "ABC"
     }
 
     func didStartTripRecording(with tripInfo: DEMTripInfo!) {
-        <#code#>
+
     }
 
     func didStopTripRecording(_ drivingEngine: DEMDrivingEngineManager!) {
-        <#code#>
+
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didSaveTripInformation trip: DEMTripInfo!, driveStatus driveCompletionFlag: Bool) {
-        <#code#>
+
     }
 
     func didStopInvalidTripRecording(_ drivingEngine: DEMDrivingEngineManager!) {
-        <#code#>
+
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectStartOfSpeeding overSpeedingEvent: DEMEventInfo!) {
-        <#code#>
+
     }
 
-<<<<<<< HEAD
     @IBAction func onStartTrip(_ sender: UIButton) {
         if sender.titleLabel?.text == "Start" {
             sender.setTitle("End", for: .normal)
@@ -89,18 +88,19 @@ extension ViewController: DEMDrivingEngineDelegate {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-=======
+
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectEndOfSpeeding overSpeedingEvent: DEMEventInfo!) {
-        <#code#>
->>>>>>> 4af3e725694b7b0c597cec34a40fe63114d4cc14
+
+
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectAcceleration accelerationEvent: DEMEventInfo!) {
-        <#code#>
+
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectBraking brakingEvent: DEMEventInfo!) {
-        <#code#>
+
+        }
     }
 
 }

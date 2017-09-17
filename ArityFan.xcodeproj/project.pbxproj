@@ -204,7 +204,7 @@
 				TargetAttributes = {
 					F17E5AF91F6EA7BC003282A2 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 93J5N959FE;
+						DevelopmentTeam = L7EN985RFR;
 						ProvisioningStyle = Automatic;
 					};
 					F17E5B0D1F6EA7BC003282A2 = {
@@ -504,14 +504,14 @@
 			baseConfigurationReference = 28C54C80ADE3B0641ED421AE /* Pods-ArityFan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 93J5N959FE;
+				DEVELOPMENT_TEAM = L7EN985RFR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ArityFan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.edmundmok.ArityFan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edmundmok.ArityFan12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -522,14 +522,14 @@
 			baseConfigurationReference = 1EBDDC6D83F403819EF1DBC2 /* Pods-ArityFan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 93J5N959FE;
+				DEVELOPMENT_TEAM = L7EN985RFR;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = ArityFan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.edmundmok.ArityFan;
+				PRODUCT_BUNDLE_IDENTIFIER = com.edmundmok.ArityFan12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -586,6 +586,7 @@
 				F17E5B191F6EA7BC003282A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F17E5B1A1F6EA7BC003282A2 /* Build configuration list for PBXNativeTarget "ArityFanTests" */ = {
 			isa = XCConfigurationList;
@@ -594,6 +595,7 @@
 				F17E5B1C1F6EA7BC003282A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
