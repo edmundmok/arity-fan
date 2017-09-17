@@ -13,6 +13,8 @@
 		F17E5B051F6EA7BC003282A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17E5B041F6EA7BC003282A2 /* Assets.xcassets */; };
 		F17E5B081F6EA7BC003282A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17E5B061F6EA7BC003282A2 /* LaunchScreen.storyboard */; };
 		F17E5B131F6EA7BC003282A2 /* ArityFanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E5B121F6EA7BC003282A2 /* ArityFanTests.swift */; };
+		F17E5B1E1F6EA818003282A2 /* CoreEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F17E5B1D1F6EA818003282A2 /* CoreEngine.framework */; };
+		F17E5B1F1F6EA818003282A2 /* CoreEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F17E5B1D1F6EA818003282A2 /* CoreEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F17E5B201F6EA818003282A2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				F17E5B1F1F6EA818003282A2 /* CoreEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F17E5AFA1F6EA7BC003282A2 /* ArityFan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArityFan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17E5AFD1F6EA7BC003282A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +52,7 @@
 		F17E5B0E1F6EA7BC003282A2 /* ArityFanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArityFanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17E5B121F6EA7BC003282A2 /* ArityFanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArityFanTests.swift; sourceTree = "<group>"; };
 		F17E5B141F6EA7BC003282A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F17E5B1D1F6EA818003282A2 /* CoreEngine.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CoreEngine.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F17E5B1E1F6EA818003282A2 /* CoreEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +77,7 @@
 		F17E5AF11F6EA7BC003282A2 = {
 			isa = PBXGroup;
 			children = (
+				F17E5B1D1F6EA818003282A2 /* CoreEngine.framework */,
 				F17E5AFC1F6EA7BC003282A2 /* ArityFan */,
 				F17E5B111F6EA7BC003282A2 /* ArityFanTests */,
 				F17E5AFB1F6EA7BC003282A2 /* Products */,
@@ -106,6 +125,7 @@
 				F17E5AF61F6EA7BC003282A2 /* Sources */,
 				F17E5AF71F6EA7BC003282A2 /* Frameworks */,
 				F17E5AF81F6EA7BC003282A2 /* Resources */,
+				F17E5B201F6EA818003282A2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -344,6 +364,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93J5N959FE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ArityFan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edmundmok.ArityFan;
@@ -357,6 +381,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93J5N959FE;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = ArityFan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.edmundmok.ArityFan;

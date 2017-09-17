@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreEngine
 
 class ViewController: UIViewController {
 
