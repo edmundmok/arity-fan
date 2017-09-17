@@ -8,11 +8,13 @@
 
 import UIKit
 import CoreEngine
+import BAFluidView
 
 class ViewController: UIViewController {
 
     @IBOutlet var startTrip: UIButton!
     @IBOutlet var amountSpilt: UILabel!
+    @IBOutlet var water: BAFluidView!
 
     fileprivate var amountRemaining: Double = 100.0
 
@@ -26,7 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        water.fill(to: 10)
         setupCoreEngine()
     }
 
@@ -50,7 +52,7 @@ class ViewController: UIViewController {
         if sender.titleLabel?.text == "Start" {
             sender.setTitle("End", for: .normal)
         } else {
-
+            water.fill(to: 9)
             sender.setTitle("Start", for: .normal)
         }
     }
@@ -93,7 +95,7 @@ extension ViewController: DEMDrivingEngineDelegate {
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectEndOfSpeeding overSpeedingEvent: DEMEventInfo!) {
-        
+
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectAcceleration accelerationEvent: DEMEventInfo!) {
