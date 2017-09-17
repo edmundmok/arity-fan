@@ -14,8 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet var startTrip: UIButton!
     @IBOutlet var amountSpilt: UILabel!
 
+    fileprivate var amountRemaining: Double = 100.0
+
     private var sharedEngine: DEMDrivingEngineManager!
     private var engineConfiguration: DEMConfiguration!
+
+    fileprivate let accelerationPenalty: Double = 2
+    fileprivate let brakePenalty: Double = 2
+    fileprivate let speedingPenalty: Double = 1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,12 +46,30 @@ class ViewController: UIViewController {
         self.sharedEngine.register(for: .all)
     }
 
+    @IBAction func onStartTrip(_ sender: UIButton) {
+        if sender.titleLabel?.text == "Start" {
+            sender.setTitle("End", for: .normal)
+        } else {
+
+            sender.setTitle("Start", for: .normal)
+        }
+    }
+
+    func createAlert() {
+        let alert = UIAlertController(title: "Trip ended",
+                                      message: "You spilt \(amountSpilt) amount of water",
+            preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel,
+                                      handler: nil))
+    }
+
 }
 
 extension ViewController: DEMDrivingEngineDelegate {
 
     func didStartTripRecording(_ drivingEngine: DEMDrivingEngineManager!) -> String! {
-        return "ABC"
+
+        return ""
     }
 
     func didStartTripRecording(with tripInfo: DEMTripInfo!) {
@@ -68,40 +92,17 @@ extension ViewController: DEMDrivingEngineDelegate {
 
     }
 
-    @IBAction func onStartTrip(_ sender: UIButton) {
-        if sender.titleLabel?.text == "Start" {
-            sender.setTitle("End", for: .normal)
-        } else {
-
-            sender.setTitle("Start", for: .normal)
-        }
-    }
-
-    func createAlert() {
-        let alert = UIAlertController(title: "Trip ended",
-                                      message: "You spilt \(amountSpilt) amount of water",
-            preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: .cancel,
-                                      handler: nil))
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectEndOfSpeeding overSpeedingEvent: DEMEventInfo!) {
-
-
+        
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectAcceleration accelerationEvent: DEMEventInfo!) {
+        let totalPenalty = accelerationPenalty * accelerationEvent.speedChange
 
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectBraking brakingEvent: DEMEventInfo!) {
 
         }
-    }
-
 }
 
