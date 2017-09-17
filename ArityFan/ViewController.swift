@@ -28,7 +28,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        water.fill(to: 10)
+        water.fillDuration = 0
+        water.fillRepeatCount = 0
+        water.fillAutoReverse = false
+        water.fill(to: 0.8)
+        water.stopAnimation()
         setupCoreEngine()
     }
 
