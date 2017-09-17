@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D8241AC5CD8B5480309DA24 /* Pods_ArityFanTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18971328F277E565E96B578A /* Pods_ArityFanTests.framework */; };
+		708AFF52B860E77B884189F6 /* Pods_ArityFan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD25AF20F3115DAD51692393 /* Pods_ArityFan.framework */; };
 		F17E5AFE1F6EA7BC003282A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E5AFD1F6EA7BC003282A2 /* AppDelegate.swift */; };
 		F17E5B001F6EA7BC003282A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F17E5AFF1F6EA7BC003282A2 /* ViewController.swift */; };
 		F17E5B031F6EA7BC003282A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17E5B011F6EA7BC003282A2 /* Main.storyboard */; };
@@ -42,6 +44,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		18971328F277E565E96B578A /* Pods_ArityFanTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArityFanTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EBDDC6D83F403819EF1DBC2 /* Pods-ArityFan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArityFan.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArityFan/Pods-ArityFan.release.xcconfig"; sourceTree = "<group>"; };
+		28C54C80ADE3B0641ED421AE /* Pods-ArityFan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArityFan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArityFan/Pods-ArityFan.debug.xcconfig"; sourceTree = "<group>"; };
+		AD25AF20F3115DAD51692393 /* Pods_ArityFan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ArityFan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1DF5A559D27D34BBBA99C61 /* Pods-ArityFanTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArityFanTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ArityFanTests/Pods-ArityFanTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F112C98D1F70A0391ABBAD28 /* Pods-ArityFanTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArityFanTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ArityFanTests/Pods-ArityFanTests.release.xcconfig"; sourceTree = "<group>"; };
 		F17E5AFA1F6EA7BC003282A2 /* ArityFan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArityFan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F17E5AFD1F6EA7BC003282A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F17E5AFF1F6EA7BC003282A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +69,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17E5B1E1F6EA818003282A2 /* CoreEngine.framework in Frameworks */,
+				708AFF52B860E77B884189F6 /* Pods_ArityFan.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +77,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D8241AC5CD8B5480309DA24 /* Pods_ArityFanTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2190CCA08C6B94979E6983B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD25AF20F3115DAD51692393 /* Pods_ArityFan.framework */,
+				18971328F277E565E96B578A /* Pods_ArityFanTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4EB3E11494E80EEC2B417177 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28C54C80ADE3B0641ED421AE /* Pods-ArityFan.debug.xcconfig */,
+				1EBDDC6D83F403819EF1DBC2 /* Pods-ArityFan.release.xcconfig */,
+				D1DF5A559D27D34BBBA99C61 /* Pods-ArityFanTests.debug.xcconfig */,
+				F112C98D1F70A0391ABBAD28 /* Pods-ArityFanTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F17E5AF11F6EA7BC003282A2 = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +111,8 @@
 				F17E5AFC1F6EA7BC003282A2 /* ArityFan */,
 				F17E5B111F6EA7BC003282A2 /* ArityFanTests */,
 				F17E5AFB1F6EA7BC003282A2 /* Products */,
+				4EB3E11494E80EEC2B417177 /* Pods */,
+				2190CCA08C6B94979E6983B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,10 +154,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F17E5B171F6EA7BC003282A2 /* Build configuration list for PBXNativeTarget "ArityFan" */;
 			buildPhases = (
+				DECE7B688D05CB277C55858D /* [CP] Check Pods Manifest.lock */,
 				F17E5AF61F6EA7BC003282A2 /* Sources */,
 				F17E5AF71F6EA7BC003282A2 /* Frameworks */,
 				F17E5AF81F6EA7BC003282A2 /* Resources */,
 				F17E5B201F6EA818003282A2 /* Embed Frameworks */,
+				981FC9A4F62E6463178BDD1E /* [CP] Embed Pods Frameworks */,
+				52A1A004C3B5467C7738C52B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F17E5B1A1F6EA7BC003282A2 /* Build configuration list for PBXNativeTarget "ArityFanTests" */;
 			buildPhases = (
+				EF3AE36D62B97090AF0B5690 /* [CP] Check Pods Manifest.lock */,
 				F17E5B0A1F6EA7BC003282A2 /* Sources */,
 				F17E5B0B1F6EA7BC003282A2 /* Frameworks */,
 				F17E5B0C1F6EA7BC003282A2 /* Resources */,
+				78B785B5541D54FDAA90ED99 /* [CP] Embed Pods Frameworks */,
+				8BA5E83220C85CC2F2948F2B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,6 +253,108 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		52A1A004C3B5467C7738C52B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArityFan/Pods-ArityFan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78B785B5541D54FDAA90ED99 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArityFanTests/Pods-ArityFanTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BA5E83220C85CC2F2948F2B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArityFanTests/Pods-ArityFanTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		981FC9A4F62E6463178BDD1E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ArityFan/Pods-ArityFan-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BAFluidView/BAFluidView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BAFluidView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ArityFan/Pods-ArityFan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DECE7B688D05CB277C55858D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArityFan-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF3AE36D62B97090AF0B5690 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ArityFanTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F17E5AF61F6EA7BC003282A2 /* Sources */ = {
@@ -361,6 +501,7 @@
 		};
 		F17E5B181F6EA7BC003282A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28C54C80ADE3B0641ED421AE /* Pods-ArityFan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93J5N959FE;
@@ -378,6 +519,7 @@
 		};
 		F17E5B191F6EA7BC003282A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1EBDDC6D83F403819EF1DBC2 /* Pods-ArityFan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 93J5N959FE;
@@ -395,6 +537,7 @@
 		};
 		F17E5B1B1F6EA7BC003282A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1DF5A559D27D34BBBA99C61 /* Pods-ArityFanTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -410,6 +553,7 @@
 		};
 		F17E5B1C1F6EA7BC003282A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F112C98D1F70A0391ABBAD28 /* Pods-ArityFanTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
