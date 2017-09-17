@@ -65,12 +65,15 @@ class ViewController: UIViewController {
                                       handler: nil))
     }
 
+    fileprivate func updateView() {
+
+    }
+
 }
 
 extension ViewController: DEMDrivingEngineDelegate {
 
     func didStartTripRecording(_ drivingEngine: DEMDrivingEngineManager!) -> String! {
-
         return ""
     }
 
@@ -91,20 +94,23 @@ extension ViewController: DEMDrivingEngineDelegate {
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectStartOfSpeeding overSpeedingEvent: DEMEventInfo!) {
-
+        amountRemaining -= speedingPenalty * overSpeedingEvent.speedChange
+        updateView()
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectEndOfSpeeding overSpeedingEvent: DEMEventInfo!) {
-
+        amountRemaining -= speedingPenalty * overSpeedingEvent.speedChange
+        updateView()
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectAcceleration accelerationEvent: DEMEventInfo!) {
-        let totalPenalty = accelerationPenalty * accelerationEvent.speedChange
-
+        amountRemaining -= accelerationPenalty * accelerationEvent.speedChange
+        updateView()
     }
 
     func drivingEngine(_ drivingEngine: DEMDrivingEngineManager!, didDetectBraking brakingEvent: DEMEventInfo!) {
-
-        }
+        amountRemaining -= brakePenalty * brakingEvent.speedChange
+        updateView()
+    }
 }
 
